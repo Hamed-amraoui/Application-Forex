@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Oswald&family=Roboto:wght@100;300;400;500;700&family=Sen:wght@400;700;800&display=swap');
+/*Page Change*/
+.container_bureaux{
+    padding-top: 15rem;
+    height: 100%;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container_bureaux .bttn_bureaux{
+    padding-top: 8.5rem;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container_Banques .title h1 ,.container_bureaux .title h1{
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 2rem;
+}
+.container_Banques .title span,.container_bureaux .title span{
+    color: #27ae60;
+}
+.container_bureaux .bttn_bureaux .title h4 {
+    padding-bottom: 2rem;
+    font-family: 'Sen', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+}
+.container_bureaux .bttn_bureaux  {
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.cities_list {
+    padding-top: 2rem;
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    
+    
+}
+.container_bureaux .bttn_bureaux .cities_list ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin: 0 8px 50px 0;
+    align-items: center;
+}
+.container_bureaux .bttn_bureaux .cities_list ul li a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    background: #f3f3f3;
+    padding: 15px 14px;
+    color: #8e9696;   
+}
+.container_bureaux .bttn_bureaux .cities_list ul li a:hover{
+    background-color: #27ae60;
+    color: #f3f3f3;
+    text-decoration: underline;
+}
+.container_bureaux .tab_bureaux{
+    text-align: left;
+    margin-top: 5rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+.container_bureaux .tab_bureaux thead{
+    max-height: 100vh;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+}
+thead th {
+    position: static;
+    top: 0;
+    background-color: #27ae60;
+    color: #e6e7e8;
+    font-size: 15px;
+}
+.container_bureaux .tab_bureaux th,
+.container_bureaux .tab_bureaux td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.container_bureaux .tab_bureaux td{
+    color: black;
+}
+.container_bureaux .tab_bureaux td a{
+    text-decoration: none;
+    color: #27ae60;
+}
+.container_bureaux .tab_bureaux td a:hover{
+    text-decoration: underline;
+}
+.container_bureaux .tab_bureaux td span{
+    background-color: #27ae60;
+}
+.container_bureaux h5{
+    padding-top: 2rem;
+    font-size: 100%;
+    text-align: center;
+    font-weight: 500;
+    color:black;
+    font-style: italic;
+}
+
+/*End Page Change*/
+
+/*Page Banque*/
+.container_Banques{
+    padding-top: 15rem;
+    height: 100%;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container_Banques .banques_list{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: row;
+    justify-content: space-around;
+}
+.container_Banques .banques_list .banques img{
+    height: 80px;
+    width: 80px;
+   position: relative;
+   left: 70px;
+}
+.container_Banques .banques_list .banques_atb img{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: auto;
+    left: 20px;
+}
+
+
+/*End Page Banque*/
+/* Page FAQ*/
+#container-faq .container-faq .faq-home{
+    padding-top: 15rem;
+    height: 35vw;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url(../images/question-4101953_960_720\ \(1\).jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    font-family: "Montserrat", sans-serif;
+}
+#container-faq .container-faq .faq-home::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+.container-faq .faq-home  h1 {
+    padding-top: 10rem;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    font-weight: 500;
+}
+.container-faq .faq-question  .question{
+    height: 50vw;
+    width: 100vw;
+}
+.container-faq .faq-home footer{
+    margin: auto;
+}
+/*End Page FAQ*/

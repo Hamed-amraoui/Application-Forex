@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+#Contact .contact {
+    background-color: #27ae60;
+}
+
+.container {
+    display: flex;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+
+/*header*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100000;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #192a56;
+}
+
+header .logo i {
+    color: #27ae60;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: rgb(36, 35, 35);
+}
+
+header .navbar a {
+    padding: .5rem 1.5rem;
+    color: #666;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+
+header .navbar a:active,
+header .navbar a:hover {
+    color: #fff;
+    background-color: #27ae60;
+}
+
+header .icons .input_container a {
+    cursor: pointer;
+    color: #192a56;
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 1.7rem;
+    text-align: center;
+    background-color: #eee;
+    line-height: 4.5rem;
+}
+
+header .icons .input_container a:hover {
+    color: #eee;
+    background-color: #27ae60;
+    transform: rotate(360deg);
+}
+
+.input_container {
+    border-radius: 10px;
+    border: 1px solid #27ae60;
+    padding: 2px;
+}
+
+
+/*End header*/
+
+
+/*home*/
+
+#home .home {
+    padding-top: 10rem;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url(../images/background-photo.jpg);
+    height: 45.8vw;
+    width: 100vw;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    font-family: "Montserrat", sans-serif;
+}
+
+#home .home::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#home .home .left h1 {
+    padding-top: 10rem;
+    padding-left: 10rem;
+    color: white;
+    font-size: 70px;
+    font-weight: 500;
+}
+
+#home .home .left h1 span {
+    color: #27ae60;
+}
+
+#home .home .left h2 {
+    padding-left: 10rem;
+    padding-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1rem;
+    font-weight: 500;
+    text-align: left;
+    z-index: 100000;
+    color: #27ae60;
+}
+
+#home .home .left p {
+    padding-left: 10rem;
+    padding-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: left;
+    z-index: 100000;
+    color: white;
+}
+
+
+/*End home*/
+
+
+/*Style */
+
+.Cour_dechange {
+    margin: 5em auto;
+    max-width: 1000px;
+    height: 80%;
+    background-color: rgb(251, 250, 250);
+    box-shadow: 0 0 10px 0 gray;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.content_desc {
+    padding: 30px 30px 0;
+  text-align: center;
+}
+
+.content_desc h1 { 
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    font-weight: 500;
+    line-height: 1.1;
+    color: rgb(21, 20, 20);
+}
+
+.content_flags {
+    width: 900px;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin : 8rem;
+    margin-top: 15px;
+   
+}
+
+.content_flags .flag {
+    margin:auto; 
+    border: 1px solid #ccc;
+    transition: all 0.2s ease-in-out;
+}
+.flag:hover {
+    /* border: 2px solid #777; */
+    /* background-color:#010402; */
+      transform: scale(1.05);
+      transition: all 0.2s ease-in-out;
+}
+.flag img {
+    width: 100px;
+    height: auto;
+}
+
+div.flag desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.flag a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    background: #f3f3f3;
+    padding: 5px 0px 5px 5;
+    color: #8e9696;
+}
+
+
+/*Cantact us*/
+
+.contact {
+    padding-top: 15rem;
+}
+
+.contact form {
+    height: 50%;
+    width: 50%;
+    padding: 30px;
+    background-color: hsla(0, 35%, 93%, 0.705);
+    border-radius: 10px;
+    position: relative;
+    left: 360px;
+    margin-bottom: 50px;
+    box-shadow: 5px 10px 8px 10px #888888;
+}
+
+form h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+form .separation {
+    width: 100%;
+    height: 1px;
+    background-color: #27ae60;
+}
+
+form .corps-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+form .corps-formulaire .groupe {
+    position: relative;
+    /* Pour mettre positionner l’élément dans le flux normal de la page */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form .corps-formulaire .gauche .groupe input {
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px;
+    border: 1px solid #c9c9c9;
+    outline-color: #747cdf;
+    border-radius: 5px;
+}
+
+form .corps-formulaire .gauche .groupe i {
+    position: absolute;
+    /* positionné par rapport à son parent le plus proche positionné */
+    left: 0;
+    top: 25px;
+    padding: 9px 8px;
+    color: #27ae60;
+}
+
+form .corps-formulaire .droite {
+    margin-left: 80px;
+}
+
+form .corps-formulaire .droite .groupe {
+    height: 100%;
+    width: 100%;
+}
+
+form .corps-formulaire .droite .groupe textarea {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid #27ae60;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+    height: 72%;
+    width: 100%;
+}
+
+form .pied-formulaire button {
+    margin-top: 10px;
+    background-color: #27ae60;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: relative;
+    left: 200px;
+}
+
+form .pied-formulaire button:hover {
+    transform: scale(1.05);
+}
+
+
+/* end Cantact us*/
+
+
+/*footer*/
+
+footer {
+    width: 100%;
+    height: 10%;
+    margin-top: auto;
+    background-color: #111;
+    font-family: " open sans";
+    padding-top: 40px;
+    position: relative;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-container h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-container p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.social a img {
+    filter: grayscale(1);
+}
+
+.social a:hover img {
+    filter: grayscale(0);
+}
+
+.footer-bottom {
+    background-color: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+
+/*end footer*/
+
+
+/*registrton*/
+
+#logreg {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+    position: relative;
+    left: 45rem;
+}
+
+.logincontainer {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.logincontainer .forms {
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+.logincontainer .form {
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.logincontainer.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.logincontainer .signup {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.logincontainer.active .signup {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.logincontainer.active .forms {
+    height: 600px;
+}
+
+.logincontainer .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #27ae60;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus,
+ :valid) {
+    border-bottom-color: #27ae60;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus,
+ :valid)~i {
+    color: #27ae60;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #27ae60;
+}
+
+.form .text {
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #27ae60;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #27ae60;
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/*registrton*/
+
+@media(max-width:620px) {
+    .contact-address {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:500px) {
+    .contact-form .container {
+        width: 90%;
+    }
+    .contact-form .container div {
+        flex-direction: column;
+    }
+    .contact-form .container div:nth-child(1) span {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

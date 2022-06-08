@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <!-- <link rel="stylesheet" href="../stylesheets/s2.css"> -->
+    <link rel="stylesheet" href="../stylesheets/styledevise.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Devise</title>
+    <link rel="icon shortcut" type="icon" href="../images/forex.png" />
+</head>
+
+<body>
+    <!-- header section starts      -->
+    <header>
+        <a href="/" class="logo"><span><img src=../images/forex.png></span></a>
+
+        <nav class="navbar">
+            <a href="./Banques.html">Banques</a>
+            <a href="./Change.html"> Bureaux de change</a>
+            <a href="./Faq.html">Faq</a>
+            <a href="./Contact.html">Nous Contact</a>
+            <a href="./Compte.html">Mon Compte</a>
+        </nav>
+        <div class="icons">
+            <!-- <i class="fas fa-bars" id="menu-bars"></i> -->
+            <div class="input_container">
+                <input type="text" placeholder="Search" color="#eeeee4" />
+                <a class="fas fa-search" id="search-icon"></a>
+            </div>
+
+        </div>
+    </header>
+    <section class="devise">
+
+        <div class="title">
+            <h1>Taux de change de  <%= str.nom %> en Dinar Tunisien<span> chez les banques</span></h1>
+        </div>
+        <div class="cour">
+           
+         
+            <div class="header_fixed">
+                <% if(allResults[0].vente==undefined) { %>
+                        <h2>li n'ya pas de devise c'est momment</h2>
+                    <% }else{ %>  
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Banque</th>
+                                        <th>Nom Devise</th>
+                                        <th>Coût de Vente</th>
+                                        <th>Coût d'Achat</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% allResults.forEach(function(result) {%>
+                                        <% if(result.img_bank!=null) {%>   
+                                        <tr>
+                                            <td >
+                                                <div class="bank">
+
+                                                    <img src="<%= result.img_bank%>">
+                                                    <a  href=""><h6><%=result.nom_bank %> </h6></a>
+                                                </div>
+                                            </td>
+
+                                            <td >  
+                                                <div class="imgdivise">
+                                                    <img src="<%= str.img%>">
+                                                    <h4><%= str.nom %></h4>
+                                                    
+                                                </div>
+                                            </td>  
+
+                                            <td>
+                                                <h3><%= result.vente %></h3>
+                                            </td>
+
+                                            <td>
+                                            <h3><%= result.achat%></h3> 
+                                            </td>
+                                        
+                                            <td>
+                                                <%= result.date %>
+                                            </td>
+                                        <% } %>
+                                        </tr>
+                                        <% }); %>
+
+                                </tbody>
+                            </table> 
+                        <% } %> 
+                <div class="best_devise">
+                    <div class="convertir">
+                        <h2>Convertir <span id="right"><%= str.nom %></span> vers <span id="left">Dinar Tunisien</span>   </h2>
+                        <div class="conv">
+                          
+                                <input type="text" placeholder="<%= Convertir.etranger %> " id="etranger" value="" oninput="convertie()"/>
+                      
+                        
+                            <button id="change" onmouseover="mouseOver()" onmouseout="mouseOut()" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADrklEQVR4nO2avWsUQRiHn70kYKExojZqZRKwsIpaxT/AQs0JIsSgYEDUgIVgMEqMEfwIKDYqGkyhmIiBaHKx8B/QSu0EkWihQhQ/EKNd8M7ineXmltvdeDeze8vtA8vN7s47985v53sGUlJSUuqYhrgdWAIZ4CDQBryJ2ZdYOAIU1HU1Zl9i4ShFAepShAbgPqkI3KNUhGsmEm5EGpkeYJ2JBC3yFvgBrFb3J4A8cDLAJihv88AESAtbSPC1I0CAsLwdyAAbAxJIAssC3hVCbFsbPQ+eA8+q88caDnAYWKU9GwVyATYTiAibtWfbgU490jDFIjFswlMLOMBNSovvHaSO/y8l+fWWgFrEAW4hAyKXUeAY4UU8lEoUjJpuLGUekiGAo4WNZh5kHFDrPAD+qvAkBjMPyRCgADy0lXgSqoBVUgEi/r8mYC8wjixu/AF+q/C4etcUpUNRtgFdwBWgvcy7TerqAeaAfoJHeMaIogRkgMvADOUz76UdmAYuEYF/UQhwERjQ7r8BZ4EOYLm6OoAh9Q6k7z8NXIjAP6tzgS5kzu6mPwU0B8RvBh5r8fPAbsM+leTXZgloQuq8O5J7BOwDFgJsFpCGcFrdO8jyl7WG0aYAXRTr/FegF/miYeSBQ8B3dd+u0rKCTQGyWvg6wV/eyy9l45JIAbZq4ScV2Os226r0xRebAqzXwu8rsH/nk5ZRbAqgz9oc31j+6DZLaTsqwqYA81q4tQL7Ni38uUpffLEpwEstvKsCe93mRZW++GJTgBktfJzgAZCXFmXjYm1eYFOAHDKxAVgL3F3i/2VUXHcHaI6ECrCIzOrcxnAPMhpcGWDTggyF3X6/gGx9LVry0fpkKAeMaPdZpHsbojgZWgFsAc6pd/qgZwSYtelgFOsBg+p3AOna1gDn1eVHAcn8YEAcI0QxHc4DZ5CvPxcSFxUnq2ys9f8uUa4IzQJPkSKeRYr9BvXuE/AKqTI5LNZ5L1Eviy8iawJTEf+vL+mqcNwOxI0NARxkdbebyiZBkWK6DfBuZTvI3l7NYrIElNvHt96NVYspAfwOMUwaSt8aJgRwgBuUZn4M6MPwVrYNvG1AJ3BKu3fP0vkV5XJf/guyBNZvyEfTdHof6BsFZc/SBSS2M8S21q/hDOELlkHFuOa7uRA+OEg7sJ/Ss3Qur5Fu7H+qwE/kCFut1/+PSENdNW4jaOIMX2IpJ8IYdSjCbUpF6I3VoxjwitAXrzvx4CC7u30k4xheSkpKSv3yD5QxLHJGU2qpAAAAAElFTkSuQmCC"/></button>
+                   
+                                <input type="text" placeholder="<%= Convertir.dinar %> " id="dinar" value="" />
+                    
+                       
+                    </div>
+                    </div>
+                   
+                    <div class="boxed">
+                        <h2>Meilleurs taux des banques</h2>
+                        <div class="vente">
+                            <img src="<%= bestResult.imgbankV%>">
+                            <div class="line">
+                                <h3>VENTE =</h3>
+                                <h4><%= bestResult.vente %></h4>
+                            </div>
+                        </div>
+                        <div class="achat">
+                            <img src="<%= bestResult.imgbankA%>">
+                            <div class="line">
+                                <h3>ACHAT =</h3>
+                                <h4 id="bestResultachat"><%= bestResult.achat %></h4>
+                            </div>
+                           
+                        </div>
+        
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="attantion">   
+                <p>
+                    * Le site ne peut garantir l'exactitude des taux de change affichés.
+                     Vous devez confirmer les taux actuels avant d'effectuer des transactions
+                      qui pourraient être affectées par les changements des taux de change.
+                </p>
+            </div>
+        </div>
+       
+    </section>
+    
+    <!-- footer  -->
+    <footer>
+        <div class="footer-container">
+            <h3>Forex</h3>
+            <p>Your Complete trading Solution</p>
+            <div class="social">
+                <a href=""> <img src="https://img.icons8.com/glyph-neue/64/26e07f/facebook-circled.png" /></a>
+                <a href=""> <img src="https://img.icons8.com/glyph-neue/64/26e07f/instagram-new.png" /></a>
+                <a href=""><img src="https://img.icons8.com/glyph-neue/64/26e07f/twitter.png" /></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2022 Forex. All rights reserved</p>
+        </div>
+    </footer>
+   
+    <script  src="../Script/convertir.js"></script>
+</body>
+
+</html>
